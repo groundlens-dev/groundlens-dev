@@ -103,7 +103,7 @@ Presented at **IEEE PES General Meeting 2026** (AI-powered Digital Twins for Gri
 <div align="center">
 
 <a href="POST_URL">
-  <img src="assets/linkedin_post.png" width="420" alt="Featured LinkedIn post — 100k+ impressions" />
+  <img src="assets/Linkedin_post.png" width="420" alt="Featured LinkedIn post — 100k+ impressions" />
 </a>
 
 <sub> <b>100,000+ impressions</b> · <a href="POST_URL">read the post on LinkedIn →</a></sub>
