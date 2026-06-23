@@ -35,7 +35,7 @@ Both are MIT-licensed, grounded in peer-reviewed research, and built to be audit
 
 <br>
 
-<img src="https://avatars.githubusercontent.com/u/283118079?v=4" height="54" alt="Groundlens" />
+<img src="assets/groundlens-logo.png" height="90" alt="Groundlens" />
 
 ## Groundlens
 ### LLM output verification
