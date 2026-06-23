@@ -1,34 +1,61 @@
 <div align="center">
 
-<img src="https://avatars.githubusercontent.com/u/283118079?v=4" width="110" alt="Groundlens" />
+<img src="assets/hero.png" width="100%" alt="Groundlens — geometric methods for trustworthy models" />
 
-# Groundlens
+# GROUNDLENS
 
 ### Geometric methods for trustworthy models
 
 <p>
-Embedding geometry to verify <em>what an LLM says</em> · energy geometry to model <em>how a physical system behaves</em><br>
-Deterministic · auditable · calibrated · explicit about its limits
+An open-source practice for <b>trustworthy modeling</b> — making the outputs of both AI systems and physical systems verifiable.<br>
+Embedding geometry to check <em>what an LLM says</em> · energy geometry to model <em>how a physical system behaves</em>.
 </p>
 
 [![Website](https://img.shields.io/badge/groundlens.dev-fc7604?style=for-the-badge&logo=astro&logoColor=white)](https://groundlens.dev)
-[![arXiv](https://img.shields.io/badge/arXiv-Research-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/search/cs?searchtype=author&query=Mar%C3%ADn,+J)
-[![License: MIT](https://img.shields.io/badge/License-MIT-000000?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![LinkedIn](https://img.shields.io/badge/Javier_Marin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/javiermarinvalenzuela/)
+[![Live demo](https://img.shields.io/badge/Hugging%20Face-Live%20demo-111111?style=for-the-badge&logo=huggingface&logoColor=FFD21E)](https://huggingface.co/spaces/groundlens/demo)
+[![Google Scholar](https://img.shields.io/badge/Google%20Scholar-4285F4?style=for-the-badge&logo=googlescholar&logoColor=white)](https://scholar.google.es/citations?user=cqDaAlEAAAAJ&hl=es)
+[![License: MIT](https://img.shields.io/badge/License-MIT-000000?style=for-the-badge)](LICENSE)
 
 <br>
 
-**[Research](#-research) · [Projects](#-projects) · [Selected results](#-selected-results) · [Featured](#-featured) · [About](#-about)**
+**[Groundlens](#groundlens) · [Otwin](#otwin) · [Featured](#featured) · [Research](#research) · [About](#about)**
 
 </div>
 
 ---
 
-Groundlens is an open-source practice for **trustworthy modeling** — making the outputs of both AI systems and physical systems verifiable, with methods rooted in geometry and grounded in peer-reviewed research. Two product lines, one principle: *verification over capability — deterministic where possible, calibrated where not, and clear about where the method stops working.*
+Most AI and modeling failures are not failures of capability — they are failures of **trust**: a model produces an output, and nothing tells you whether to believe it. Groundlens builds the missing layer. It applies **geometry** to make outputs verifiable, with one consistent stance: *deterministic where possible, calibrated where not, and clear about where the method stops working.*
+
+It ships as two open-source lines that share that DNA:
+
+- **Groundlens** — verifies **what a language model says**, using the geometry of embeddings.
+- **Otwin** — models **how a physical system behaves**, using the geometry of energy (port-Hamiltonian structure) with calibrated uncertainty.
+
+Both are MIT-licensed, grounded in peer-reviewed research, and built to be auditable rather than impressive.
 
 <br>
 
-## Research
+<img src="https://avatars.githubusercontent.com/u/283118079?v=4" height="54" alt="Groundlens" />
+
+## Groundlens
+### LLM output verification
+
+Geometric grounding and hallucination triage for production LLMs in regulated industries. It ranks responses by how faithfully they reflect their sources — **deterministic scores, sub-second, no second LLM in the loop** — so the ones that earned trust pass and the rest go to human review.
+
+<div align="center">
+
+[![Try the live demo](https://img.shields.io/badge/Hugging%20Face-Try%20the%20live%20demo-111111?style=for-the-badge&logo=huggingface&logoColor=FFD21E)](https://huggingface.co/spaces/groundlens/demo)
+
+<sub>Run grounding verification in your browser — no install.</sub>
+
+</div>
+
+[![Repo](https://img.shields.io/badge/repo-groundlens--dev/groundlens-181717?style=flat&logo=github)](https://github.com/groundlens-dev/groundlens)
+&nbsp;[![Stars](https://img.shields.io/github/stars/groundlens-dev/groundlens?label=%E2%98%85)](https://github.com/groundlens-dev/groundlens/stargazers)
+
+[`groundlens`](https://github.com/groundlens-dev/groundlens) · [`grounding-benchmark`](https://github.com/groundlens-dev/grounding-benchmark) · [`groundlens-mcp`](https://github.com/groundlens-dev/groundlens-mcp) · [`Groundlens-Cookbook`](https://github.com/groundlens-dev/Groundlens-Cookbook)
+
+### Groundlens research
 
 The methods are not heuristics — they come from published work.
 
@@ -38,85 +65,85 @@ The methods are not heuristics — they come from published work.
 | **A Geometric Taxonomy of Hallucinations** | Three-type hallucination classification via directional grounding (von Mises–Fisher on displacement vectors); domain calibration reaches AUROC 0.76–0.99. | [![arXiv](https://img.shields.io/badge/arXiv-2602.13224-b31b1b)](https://arxiv.org/abs/2602.13224) |
 | **Rotational Dynamics of Factual Constraint Processing** | Transformers reject wrong answers by *rotating* the representation, not rescaling — with a phase transition at ~1.6B parameters. | [![arXiv](https://img.shields.io/badge/arXiv-2603.13259-b31b1b)](https://arxiv.org/abs/2603.13259) |
 
-<sub>Plus peer-reviewed work at IEEE and ACL/SiCon venues. Full list on [arXiv](https://arxiv.org/a/marin_j_1) and [LinkedIn](https://www.linkedin.com/in/javiermarinvalenzuela/).</sub>
-
 <br>
 
-##  Projects
+<img src="https://raw.githubusercontent.com/groundlens-dev/otwin/main/assets/otwin-icon.jpg" height="54" alt="Otwin" />
 
-<table>
-<tr>
-<td width="50%" valign="top">
+## Otwin
+### Physics-informed digital twins
 
-### Groundlens
+Digital twins with **calibrated uncertainty** for grid-scale energy storage and other physical systems. You bring the physical *model structure* you know (a port-Hamiltonian system, or an empirical law); Otwin estimates the rest from data, attaches horizon-aware uncertainty intervals, and validates without leakage against mandatory baselines. Lightweight and CPU-first, spanning **white-box** (full physics) to **grey-box** (physics + estimated residual).
 
-**LLM output verification.** Geometric grounding / hallucination triage for production LLMs in regulated industries — deterministic scores, sub-second, **no second LLM in the loop**.
-
-[![Repo](https://img.shields.io/badge/repo-groundlens-181717?logo=github)](https://github.com/groundlens-dev/groundlens)
-&nbsp;[![Stars](https://img.shields.io/github/stars/groundlens-dev/groundlens?label=%E2%98%85)](https://github.com/groundlens-dev/groundlens/stargazers)
-
-`groundlens` · [`benchmark`](https://github.com/groundlens-dev/grounding-benchmark) · [`mcp`](https://github.com/groundlens-dev/groundlens-mcp) · [`cookbook`](https://github.com/groundlens-dev/Groundlens-Cookbook)
-
-</td>
-<td width="50%" valign="top">
-
-### Otwin
-
-**Physics-informed digital twins** with **calibrated uncertainty** for grid-scale energy storage and other physical systems. Port-Hamiltonian structure, leakage-free validation, CPU-first. White-box → grey-box.
-
-[![Repo](https://img.shields.io/badge/repo-otwin-181717?logo=github)](https://github.com/groundlens-dev/otwin)
+[![Repo](https://img.shields.io/badge/repo-groundlens--dev/otwin-181717?style=flat&logo=github)](https://github.com/groundlens-dev/otwin)
 &nbsp;[![Stars](https://img.shields.io/github/stars/groundlens-dev/otwin?label=%E2%98%85)](https://github.com/groundlens-dev/otwin/stargazers)
+&nbsp;Presented at **IEEE PES General Meeting 2026** — *AI-powered Digital Twins for Grid-Scale Storage*.
 
-Presented at **IEEE PES General Meeting 2026** (AI-powered Digital Twins for Grid-Scale Storage).
-
-</td>
-</tr>
-</table>
-
-<br>
-
-##  Selected results
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/groundlens-dev/otwin/main/assets/overview.png" width="780" alt="otwin workflow: choose a model structure, estimate, quantify uncertainty, validate" />
-
-<table>
-<tr>
-<td align="center" width="50%">
-<img src="https://raw.githubusercontent.com/groundlens-dev/otwin/main/examples/battery_soh/figures/01_hero_forecast.png" width="380" alt="Battery State-of-Health forecast with calibrated band" /><br>
-<sub><b>Battery SoH</b> — the physics-informed hybrid tracks the real decay through end-of-life; a data-only model diverges.</sub>
-</td>
-<td align="center" width="50%">
-<img src="https://raw.githubusercontent.com/groundlens-dev/otwin/main/examples/pumped_hydro/figures/pumped_hydro_energy.png" width="380" alt="Pumped-hydro round-trip efficiency validated against the closed form" /><br>
-<sub><b>Pumped-hydro storage</b> — round-trip efficiency matches the closed form; energy conserved while idle.</sub>
-</td>
-</tr>
-</table>
-
-</div>
+| Problem | Result |
+|---|---|
+| **Water tank** · first-principles (white-box). A draining tank written as a port-Hamiltonian system — can a structure-preserving forecast stay physical at any horizon? | <img src="https://raw.githubusercontent.com/groundlens-dev/otwin/main/examples/water_tank_phs/figures/water_tank_dynamics.png" width="400" alt="Water tank dynamics" /><br><sub>Energy decays monotonically (passive by construction); skill ≈ 0.94 vs a persistence baseline.</sub> |
+| **DC motor** · first-principles, multi-domain. Coupled electrical + mechanical actuator — can the twin predict it with no fitting? | <img src="https://raw.githubusercontent.com/groundlens-dev/otwin/main/examples/dc_motor/figures/dc_motor_response.png" width="400" alt="DC motor response" /><br><sub>Numeric steady state matches the closed-form ω, I to within 0.001%.</sub> |
+| **Pumped-hydro storage** · white-box, grid-scale. The dominant grid storage technology — how much energy survives a charge/discharge cycle? | <img src="https://raw.githubusercontent.com/groundlens-dev/otwin/main/examples/pumped_hydro/figures/pumped_hydro_energy.png" width="400" alt="Pumped-hydro energy and round-trip efficiency" /><br><sub>Round-trip efficiency matches the closed form η<sub>p</sub>·η<sub>t</sub>; energy conserved while idle.</sub> |
+| **Battery State-of-Health** · grey-box. Forecast Li-ion SoH / remaining useful life with trustworthy intervals (predictive maintenance). | <img src="https://raw.githubusercontent.com/groundlens-dev/otwin/main/examples/battery_soh/figures/01_hero_forecast.png" width="400" alt="Battery State-of-Health forecast" /><br><sub>The physics-informed hybrid tracks the real decay to end-of-life; a data-only model diverges. The 90% band is calibrated.</sub> |
+| **Grid-scale dispatch** · predictive maintenance → real-time optimization. Dispatch storage under uncertain capacity. | <img src="https://raw.githubusercontent.com/groundlens-dev/otwin/main/examples/grid_storage_dispatch/figures/01_arbitrage_trajectories.png" width="400" alt="Grid storage dispatch under uncertain capacity" /><br><sub>The calibrated-UQ plan leaves <b>0.0 MWh</b> of demand unmet over the horizon, vs 55.6 MWh for a naive plan.</sub> |
 
 <br>
 
-##  Featured
+## Featured
 
 <div align="center">
 
-<a href="POST_URL">
-  <img src="assets/Linkedin_post.png" width="420" alt="Featured LinkedIn post — 100k+ impressions" />
+<a href="https://www.linkedin.com/feed/update/urn:li:share:7407335601592741888/">
+  <img src="assets/Linkedin_post.png" width="620" alt="Featured LinkedIn post — 100,000+ impressions" />
 </a>
 
-<sub> <b>100,000+ impressions</b> · <a href="POST_URL">read the post on LinkedIn →</a></sub>
+<sub><b>100,000+ impressions</b> · <a href="https://www.linkedin.com/feed/update/urn:li:share:7407335601592741888/">read it on LinkedIn</a></sub>
 
 </div>
 
 <br>
 
-##  About
+## Research
 
-Founder & Principal Engineer at Groundlens. Chemical engineer by training; fifteen years leading engineering and operations across regulated industries (process instrumentation, water technology, EPC), then moved full-time into the mathematics of modern AI. Today: open-source tools that make model outputs — from LLMs to physical digital twins — verifiable before they reach production.
+Groundlens is built on peer-reviewed research. Selected publications:
 
-Madrid ·  [javier@groundlens.dev](mailto:javier@groundlens.dev) ·  [groundlens.dev](https://groundlens.dev)
+| Year | Publication | Venue / link |
+|---|---|---|
+| 2026 | Rotational Dynamics of Factual Constraint Processing | [arXiv:2603.13259](https://arxiv.org/abs/2603.13259) |
+| 2026 | A Geometric Taxonomy of Hallucinations | [arXiv:2602.13224](https://arxiv.org/abs/2602.13224) |
+| 2025 | Semantic Grounding Index (SGI) | [arXiv:2512.13771](https://arxiv.org/abs/2512.13771) |
+| — | Evaluating Synthetic Tabular Data Generated to Augment Small-Sample Datasets | <sub>see Scholar</sub> |
+| — | Synthetic Tabular Data Generation | <sub>see Scholar</sub> |
+| — | Explainable Deep Neural Networks | <sub>see Scholar</sub> |
+
+<div align="center">
+
+[![Full publication list — Google Scholar](https://img.shields.io/badge/Full%20list-Google%20Scholar-4285F4?style=for-the-badge&logo=googlescholar&logoColor=white)](https://scholar.google.es/citations?user=cqDaAlEAAAAJ&hl=es)
+
+</div>
+
+<br>
+
+## Contributing
+
+Contributions are welcome across all Groundlens repositories. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening an issue or pull request.
+
+## Code of Conduct
+
+This community follows the Contributor Covenant. See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+
+## Security
+
+To report a vulnerability, please follow the process in [SECURITY.md](SECURITY.md) — do not open a public issue for security matters.
+
+## License
+
+All Groundlens open-source projects are released under the **MIT License**. See [LICENSE](LICENSE).
+
+## About
+
+**Groundlens** is an independent open-source practice for trustworthy modeling, working at the intersection of applied geometry, physics, and machine learning. Its two lines — Groundlens (LLM verification) and Otwin (physics-informed digital twins) — share a single goal: outputs you can audit before they reach production.
+
+Maintained by [Javier Marin](https://www.linkedin.com/in/javiermarinvalenzuela/) · Madrid · [javier@groundlens.dev](mailto:javier@groundlens.dev) · [groundlens.dev](https://groundlens.dev)
 
 <div align="center">
 <br>
