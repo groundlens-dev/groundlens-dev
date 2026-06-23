@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://avatars.githubusercontent.com/u/283118079?v=4" width="120" alt="Groundlens logo" />
+<img src="https://avatars.githubusercontent.com/u/283118079?v=4" width="450" alt="Groundlens logo" />
 
 # Groundlens
 
@@ -26,18 +26,26 @@ Groundlens applies **geometry** to make model outputs trustworthy — across two
 <tr>
 <td width="50%" valign="top">
 
-### 🔤 groundlens
+<div align="center">
+  <img src="https://avatars.githubusercontent.com/u/283118079?v=4" width="100" alt="Groundlens logo" />
+</div>
+
+### Groundlens
 
 **LLM output verification.** Geometric grounding / hallucination triage for production LLMs in regulated industries — deterministic scores, sub-second, **no second LLM in the loop**.
 
-Backed by three arXiv papers (Semantic Grounding Index · Geometric Taxonomy of Hallucinations · Rotational Dynamics).
+Three papers (Semantic Grounding Index · Geometric Taxonomy of Hallucinations · Rotational Dynamics).
 
 [`groundlens`](https://github.com/groundlens-dev/groundlens) · [`benchmark`](https://github.com/groundlens-dev/grounding-benchmark) · [`mcp`](https://github.com/groundlens-dev/groundlens-mcp) · [`cookbook`](https://github.com/groundlens-dev/Groundlens-Cookbook)
 
 </td>
 <td width="50%" valign="top">
 
-### ⚡ otwin
+<div align="center">
+  <img src="https://github.com/groundlens-dev/otwin/blob/9871cd7e123b338589107d20e7a66bbd3a14bd09/assets/otwin-woodmark.png" width="200" />
+</div>
+
+### Otwin
 
 **Physics-informed digital twins** with **calibrated uncertainty** for grid-scale energy storage and other physical systems. Port-Hamiltonian structure (energy geometry), leakage-free validation, CPU-first.
 
@@ -51,20 +59,10 @@ Spans white-box (pumped hydro, DC motor) to grey-box (battery State-of-Health).
 
 <br>
 
+
 <div align="center">
 
-#### From `otwin` — physics-informed forecasts, validated against baselines
-
-<img src="https://raw.githubusercontent.com/groundlens-dev/otwin/main/assets/overview.png" width="760" alt="otwin: choose a model structure, estimate, quantify uncertainty, validate" />
-
-<table>
-<tr>
-<td><img src="https://raw.githubusercontent.com/groundlens-dev/otwin/main/examples/battery_soh/figures/01_hero_forecast.png" width="380" alt="Battery State-of-Health forecast with calibrated band" /></td>
-<td><img src="https://raw.githubusercontent.com/groundlens-dev/otwin/main/examples/pumped_hydro/figures/pumped_hydro_energy.png" width="380" alt="Pumped-hydro round-trip efficiency validated against the closed form" /></td>
-</tr>
-</table>
-
-<sub>Left: battery SoH — the physics-informed hybrid tracks the real decay through end-of-life while a data-only model diverges. &nbsp; Right: pumped-hydro storage — round-trip efficiency matches the closed form.</sub>
+<img src="https://raw.githubusercontent.com/groundlens-dev/otwin/main/assets/overview.png" width="900" alt="otwin: choose a model structure, estimate, quantify uncertainty, validate" />
 
 </div>
 
