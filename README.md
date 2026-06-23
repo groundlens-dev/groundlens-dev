@@ -100,12 +100,6 @@ Presented at **IEEE PES General Meeting 2026** (AI-powered Digital Twins for Gri
 
 ##  Featured
 
-<!--
-  FEATURED LINKEDIN POST (100k+ impressions)
-  GitHub can't embed LinkedIn live, so use a clickable screenshot card.
-  1) Add a screenshot of the post to this repo, e.g. assets/linkedin-feature.png
-  2) Replace POST_URL below with the real post link.
--->
 <div align="center">
 
 <a href="POST_URL">
