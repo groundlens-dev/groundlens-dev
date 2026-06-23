@@ -35,9 +35,14 @@ Both are MIT-licensed, grounded in peer-reviewed research, and built to be audit
 
 <br>
 
-<img src="assets/groundlens-logo.png" height="90" alt="Groundlens" />
+<div align="center">
+  
+<img src="assets/groundlens_logo.png" height="90" alt="Groundlens" />
 
 ## Groundlens
+
+</div>
+
 ### LLM output verification
 
 Geometric grounding and hallucination triage for production LLMs in regulated industries. It ranks responses by how faithfully they reflect their sources — **deterministic scores, sub-second, no second LLM in the loop** — so the ones that earned trust pass and the rest go to human review.
