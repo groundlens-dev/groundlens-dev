@@ -2,7 +2,7 @@
 
 <img src="assets/hero.png" width="100%" alt="Groundlens — geometric methods for trustworthy models" />
 
-# GROUNDLENS
+# Groundlens dev
 
 ### Geometric methods for trustworthy models
 
