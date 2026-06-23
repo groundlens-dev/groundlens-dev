@@ -37,7 +37,7 @@ Both are MIT-licensed, grounded in peer-reviewed research, and built to be audit
 
 <div align="center">
   
-<img src="assets/groundlens_logo.png" height="90" alt="Groundlens" />
+<img src="assets/groundlends_logo.png" height="90" alt="Groundlens" />
 
 ## Groundlens
 
@@ -72,9 +72,14 @@ The methods are not heuristics — they come from published work.
 
 <br>
 
-<img src="https://raw.githubusercontent.com/groundlens-dev/otwin/main/assets/otwin-icon.jpg" height="54" alt="Otwin" />
+<div align="center">
+  
+<img src="assets/otwin_logo.png" height="90" alt="Otwin" />
 
 ## Otwin
+
+</div>
+
 ### Physics-informed digital twins
 
 Digital twins with **calibrated uncertainty** for grid-scale energy storage and other physical systems. You bring the physical *model structure* you know (a port-Hamiltonian system, or an empirical law); Otwin estimates the rest from data, attaches horizon-aware uncertainty intervals, and validates without leakage against mandatory baselines. Lightweight and CPU-first, spanning **white-box** (full physics) to **grey-box** (physics + estimated residual).
