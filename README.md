@@ -4,7 +4,11 @@
 
 # Groundlens dev
 
-### Geometric methods for trustworthy models
+<div align="center">
+
+Geometric methods for trustworthy models
+
+</div>
 
 <p>
 An open-source practice for <b>trustworthy modeling</b> — making the outputs of both AI systems and physical systems verifiable.<br>
@@ -23,10 +27,19 @@ Embedding geometry to check <em>what an LLM says</em> · energy geometry to mode
 </div>
 
 ---
+## Mission
 
-Most AI and modeling failures are not failures of capability — they are failures of **trust**: a model produces an output, and nothing tells you whether to believe it. Groundlens builds the missing layer. It applies **geometry** to make outputs verifiable, with one consistent stance: *deterministic where possible, calibrated where not, and clear about where the method stops working.*
+<div align="center">
+  
+*We turn "trust me" into "check me."*
 
-It ships as two open-source lines that share that DNA:
+</div>
+
+AI is fluent, and fluency hides error. A language model that sounds right and a black-box predictor that fits the data can both be confidently wrong — and neither can prove otherwise. Groundlens builds the layer that checks: every claim measured against ground truth you can inspect — the source it cited, the physics it must obey, the geometry of its own representations. No second opaque model casting a vote. Deterministic, reproducible, the same verdict every time.
+
+If it can't be verified, it can't be trusted. So we make it verifiable.
+
+## Projects
 
 - **Groundlens** — verifies **what a language model says**, using the geometry of embeddings.
 - **Otwin** — models **how a physical system behaves**, using the geometry of energy (port-Hamiltonian structure) with calibrated uncertainty.
@@ -103,7 +116,7 @@ Digital twins with **calibrated uncertainty** for grid-scale energy storage and 
 <div align="center">
 
 <a href="https://www.linkedin.com/feed/update/urn:li:share:7407335601592741888/">
-  <img src="assets/Linkedin_post.png" width="620" alt="Featured LinkedIn post — 100,000+ impressions" />
+  <img src="assets/Linkedin_post.png" width="500" alt="Featured LinkedIn post — 100,000+ impressions" />
 </a>
 
 <sub><b>100,000+ impressions</b> · <a href="https://www.linkedin.com/feed/update/urn:li:share:7407335601592741888/">read it on LinkedIn</a></sub>
