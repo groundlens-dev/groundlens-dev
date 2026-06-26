@@ -12,7 +12,6 @@ Geometric methods for trustworthy models
 
 <p>
 An open-source practice for <b>trustworthy modeling</b> — making the outputs of both AI systems and physical systems verifiable.<br>
-Embedding geometry to check <em>what an LLM says</em> · energy geometry to model <em>how a physical system behaves</em>.
 </p>
 
 [![Website](https://img.shields.io/badge/groundlens.dev-fc7604?style=for-the-badge&logo=astro&logoColor=white)](https://groundlens.dev)
