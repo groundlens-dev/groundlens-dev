@@ -22,7 +22,7 @@ Embedding geometry to check <em>what an LLM says</em> · energy geometry to mode
 
 <br>
 
-**[Groundlens](#groundlens) · [Otwin](#otwin) · [Featured](#featured) · [Research](#research) · [About](#about)**
+**[Mision](#mission) · [Groundlens](#groundlens) · [Otwin](#otwin) · [Featured](#featured) · [Research](#research) · [About](#about)**
 
 </div>
 
