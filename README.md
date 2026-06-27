@@ -1,5 +1,4 @@
 <div align="center">
-
 <img src="assets/hero2.png" width="100%" alt="Groundlens — geometric methods for trustworthy models" />
 
 # Groundlens dev
@@ -21,7 +20,7 @@ An open-source practice for <b>trustworthy modeling</b> — making the outputs o
 
 <br>
 
-**[Mission](#mission) · [Groundlens](#groundlens) · [Otwin](#otwin) · [Tools](#tools) · [Featured](#featured) · [Research](#research) · [About](#about)**
+**[Mission](#mission) · [Groundlens](#groundlens) · [Otwin](#otwin) · [Tools](#tools) · [Research lines](#research-lines) · [Featured](#featured) · [Publications](#publications) · [About](#about)**
 
 </div>
 
@@ -55,7 +54,7 @@ Both are MIT-licensed and built to be auditable.
 
 </div>
 
-### LLM output verification
+### LLM output verification - Geometric hallucination detection
 
 Geometric grounding and hallucination triage for production LLMs in regulated industries. It ranks responses by how faithfully they reflect their sources — **deterministic scores, sub-second, no second LLM in the loop** — so the ones that earned trust pass and the rest go to human review.
 
@@ -92,7 +91,7 @@ The methods are not heuristics — they come from published work.
 
 </div>
 
-### Physics-informed digital twins
+### Physics-informed digital twins- IEEE PES General Meeting 2026
 
 Digital twins with **calibrated uncertainty** for grid-scale energy storage and other physical systems. You bring the physical *model structure* you know (a port-Hamiltonian system, or an empirical law); Otwin estimates the rest from data, attaches horizon-aware uncertainty intervals, and validates without leakage against mandatory baselines. Lightweight and CPU-first, spanning **white-box** (full physics) to **grey-box** (physics + estimated residual).
 
@@ -128,6 +127,20 @@ pip install ndtracker
 
 <br>
 
+## Research lines
+
+Code-backed research that feeds the projects above — published, with the limits stated.
+
+### hamiltonian-ai — symmetry, invariance, and structure in neural optimization
+
+A symplectic optimizer for out-of-time ranking under class imbalance, phase-space diagnostics that separate valid from invalid LLM reasoning, and a systematic study of where geometric structure stops helping. The same DNA as the rest of Groundlens: read the geometry, state the limits.
+
+[![Repo](https://img.shields.io/badge/repo-groundlens--dev/hamiltonian--ai-181717?style=flat&logo=github)](https://github.com/groundlens-dev/hamiltonian-ai)
+&nbsp;[![Stars](https://img.shields.io/github/stars/groundlens-dev/hamiltonian-ai?label=%E2%98%85)](https://github.com/groundlens-dev/hamiltonian-ai/stargazers)
+&nbsp;[![arXiv](https://img.shields.io/badge/arXiv-2410.04415-b31b1b)](https://arxiv.org/abs/2410.04415)
+
+<br>
+
 ## Featured
 
 <div align="center">
@@ -142,7 +155,7 @@ pip install ndtracker
 
 <br>
 
-## Research
+## Publications
 
 Groundlens is built on peer-reviewed research. Selected publications:
 
@@ -151,9 +164,8 @@ Groundlens is built on peer-reviewed research. Selected publications:
 | 2026 | Rotational Dynamics of Factual Constraint Processing | [arXiv:2603.13259](https://arxiv.org/abs/2603.13259) |
 | 2026 | A Geometric Taxonomy of Hallucinations | [arXiv:2602.13224](https://arxiv.org/abs/2602.13224) |
 | 2025 | Semantic Grounding Index (SGI) | [arXiv:2512.13771](https://arxiv.org/abs/2512.13771) |
-| — | Evaluating Synthetic Tabular Data Generated to Augment Small-Sample Datasets | <sub>see Scholar</sub> |
-| — | Synthetic Tabular Data Generation | <sub>see Scholar</sub> |
-| — | Explainable Deep Neural Networks | <sub>see Scholar</sub> |
+| 2025 | Hamiltonian Neural Networks for Out-of-Time Credit Scoring - accepted (peer-reviewed), IEEE DSAA 2025| [arXiv:2410.10182](https://arxiv.org/abs/2410.10182)|
+| 2024 | Optimizing AI Reasoning: A Hamiltonian Dynamics Approach to Multi-Hop QA | [arXiv:2410.04415](https://arxiv.org/abs/2410.04415) |
 
 <div align="center">
 
