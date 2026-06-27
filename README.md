@@ -1,11 +1,6 @@
 <div align="center">
-<img src="assets/hero2.png" width="100%" alt="Groundlens — geometric methods for trustworthy models" />
-
-# Groundlens dev
-
-<div align="center">
-
-Geometric methods for trustworthy models
+  
+# Groundlens dev: Geometric methods for trustworthy models
 
 </div>
 
