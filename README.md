@@ -2,7 +2,7 @@
   
 # Groundlens dev: Geometric methods for trustworthy models
 
-</div>
+
 
 <p>
 An open-source practice for <b>trustworthy modeling</b> — making the outputs of both AI systems and physical systems verifiable.<br>
