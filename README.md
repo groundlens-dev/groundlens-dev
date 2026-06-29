@@ -149,7 +149,7 @@ A symplectic optimizer for out-of-time ranking under class imbalance, phase-spac
 
 <br>
 
-## Publications
+## Related Publications
 
 Groundlens is built on peer-reviewed research. Selected publications:
 
