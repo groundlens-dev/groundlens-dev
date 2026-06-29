@@ -79,7 +79,7 @@ The methods are not heuristics — they come from published work.
 
 <div align="center">
   
-<img src="assets/otwin_logo.png" height="90" alt="Otwin" />
+<img src="assets/otwin_logo_new.png" height="90" alt="Otwin" />
 
 ## Otwin
 
