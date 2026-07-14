@@ -40,24 +40,22 @@ An open-source practice for <b>trustworthy modeling</b> — making the outputs o
 </div>
 
 AI is fluent, and fluency hides error. A language model that sounds right and a black-box predictor that fits the data can both be confidently wrong — and neither can prove otherwise. Groundlens builds the layer that checks: every claim measured against ground truth you can inspect — the source it cited, the physics it must obey, the geometry of its own representations. No second opaque model casting a vote. Deterministic, reproducible, the same verdict every time.
-
-If it can't be verified, it can't be trusted. So we make it verifiable.
+**If it can't be verified, it can't be trusted. So we make it verifiable.**
 
 ## Projects
 
-- **Groundlens** — verifies **what a language model says**, using the geometry of embeddings.
-
-<br>
-
 <div align="center">
   
-<img src="assets/groundlends_logo.png" height="90" alt="Groundlens" />
+<img src="assets/groundlends_logo.png" height="120" alt="Groundlens" />
 
-### Groundlens: the deterministic first stage for RAG and agent loops. It decides what your LLM judge has to look at.
+### Groundlens: the deterministic first stage for RAG and agent loops. </br> It decides what your LLM judge has to look at.
+
+[![Repo](https://img.shields.io/badge/repo-groundlens--dev/groundlens-181717?style=flat&logo=github)](https://github.com/groundlens-dev/groundlens)
+&nbsp;[![Stars](https://img.shields.io/github/stars/groundlens-dev/groundlens?label=%E2%98%85)](https://github.com/groundlens-dev/groundlens/stargazers)
+
+[`groundlens`](https://github.com/groundlens-dev/groundlens) · [`grounding-benchmark`](https://github.com/groundlens-dev/grounding-benchmark) · [`groundlens-mcp`](https://github.com/groundlens-dev/groundlens-mcp) · [`Groundlens-Cookbook`](https://github.com/groundlens-dev/Groundlens-Cookbook)
 
 </div>
-
-### LLM output verification - Geometric hallucination detection
 
 Geometric grounding and hallucination triage for production LLMs in regulated industries. It ranks responses by how faithfully they reflect their sources — **deterministic scores, sub-second, no second LLM in the loop** — so the ones that earned trust pass and the rest go to human review.
 
@@ -65,28 +63,27 @@ Geometric grounding and hallucination triage for production LLMs in regulated in
 
 [![Try the live demo](https://img.shields.io/badge/Hugging%20Face-Try%20the%20live%20demo-111111?style=for-the-badge&logo=huggingface&logoColor=FFD21E)](https://huggingface.co/spaces/groundlens/demo)
 
-<sub>Run grounding verification in your browser — no install.</sub>
-
 </div>
 
-[![Repo](https://img.shields.io/badge/repo-groundlens--dev/groundlens-181717?style=flat&logo=github)](https://github.com/groundlens-dev/groundlens)
-&nbsp;[![Stars](https://img.shields.io/github/stars/groundlens-dev/groundlens?label=%E2%98%85)](https://github.com/groundlens-dev/groundlens/stargazers)
+> [!TIP]  
+> Run grounding verification in your browser — no install.
 
-[`groundlens`](https://github.com/groundlens-dev/groundlens) · [`grounding-benchmark`](https://github.com/groundlens-dev/grounding-benchmark) · [`groundlens-mcp`](https://github.com/groundlens-dev/groundlens-mcp) · [`Groundlens-Cookbook`](https://github.com/groundlens-dev/Groundlens-Cookbook)
 
 ### ndt — Neural Dimensionality Tracker
 
 High-frequency monitoring of how a neural network's internal representations evolve during training. It tracks representational **dimensionality** across MLPs, CNNs, Transformers and Vision Transformers, and flags discrete phase transitions (jumps) — the same DNA as Groundlens: reading the *geometry of representations* to see what a model is actually doing. Three lines to instrument any PyTorch model.
 
-```bash
-pip install ndtracker
-```
+<div align="center">
 
 [![Repo](https://img.shields.io/badge/repo-groundlens--dev/ndt-181717?style=flat&logo=github)](https://github.com/groundlens-dev/ndt)
 &nbsp;[![Stars](https://img.shields.io/github/stars/groundlens-dev/ndt?label=%E2%98%85)](https://github.com/groundlens-dev/ndt/stargazers)
 &nbsp;[![PyPI](https://img.shields.io/pypi/v/ndtracker?label=ndtracker)](https://pypi.org/project/ndtracker/)
 
-<br>
+</div>
+
+```bash
+pip install ndtracker
+```
 
 ## Research
 
@@ -113,7 +110,7 @@ Groundlens is built on peer-reviewed research. Selected publications:
 <div align="center">
 
 <a href="https://www.linkedin.com/feed/update/urn:li:share:7407335601592741888/">
-  <img src="assets/Linkedin_post.png" width="500" alt="Featured LinkedIn post — 100,000+ impressions" />
+  <img src="assets/Linkedin_post.png" width="400" alt="Featured LinkedIn post — 100,000+ impressions" />
 </a>
 
 <sub><b>100,000+ impressions</b> · <a href="https://www.linkedin.com/feed/update/urn:li:share:7407335601592741888/">read it on LinkedIn</a></sub>
@@ -135,4 +132,13 @@ All Groundlens open-source projects are released under the **APACHE 2.0**. See [
 
 **Groundlens** is an independent open-source practice for trustworthy modeling, working at the intersection of applied geometry, physics, and machine learning. Its two lines — Groundlens (LLM verification) and Otwin (physics-informed digital twins) — share a single goal: outputs you can audit before they reach production.
 
-Maintained by [Javier Marin](https://www.linkedin.com/in/javiermarinvalenzuela/) · Madrid · [javier@groundlens.dev](mailto:javier@groundlens.dev) · [groundlens.dev](https://groundlens.dev)
+Maintained by [Javier Marin](https://www.linkedin.com/in/javiermarinvalenzuela/) | [javier@groundlens.dev](mailto:javier@groundlens.dev) | [groundlens.dev](https://groundlens.dev)
+
+<div align="center">
+  
+[![Donation](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-%5E%5E-green?style=flat&logo=undertale&logoColor=green&color=white)](https://github.com/sponsors/armync)
+
+</div>
+
+
+
