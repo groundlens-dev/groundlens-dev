@@ -1,6 +1,6 @@
 <div align="center">
   
-# Groundlens: Geometric methods for trustworthy models
+# :triangular_ruler: Groundlens: Geometric methods for trustworthy models
 
 <p>
 An open-source practice for <b>trustworthy modeling</b> — making the outputs of both AI systems and physical systems verifiable.<br>
@@ -20,9 +20,10 @@ An open-source practice for <b>trustworthy modeling</b> — making the outputs o
   - [Mission](#mission) 
 
   - [Projects](#projects)
-      - [Groundlens](#groundlens)
-      - [Groundelens MCP](#groundlens-mcp)
-      - [Neural Dimensionality Tracker](#neuraldimensionalitytracker)
+      - [:traffic_light: Groundlens](#groundlens)
+      - [:electric_plug: Groundelens MCP](#groundlens-mcp)
+      - [:signal_strength: Groundelens Benchmark](#groundlensbenchmark)
+      - [:microscope: Neural Dimensionality Tracker](#neuraldimensionalitytracker)
 
   - [Research](#research)
 
@@ -32,51 +33,46 @@ An open-source practice for <b>trustworthy modeling</b> — making the outputs o
 
   - [About](#about)
 
----
+
+<br>
+
 
 ## Mission
-<div align="center">
   
 *We turn "trust me" into "check me.*
 
-</div>
 
 AI is fluent, and fluency hides error. A language model that sounds right and a black-box predictor that fits the data can both be confidently wrong — and neither can prove otherwise. Groundlens builds the layer that checks: every claim measured against ground truth you can inspect — the source it cited, the physics it must obey, the geometry of its own representations. No second opaque model casting a vote. Deterministic, reproducible, the same verdict every time.
 **If it can't be verified, it can't be trusted. So we make it verifiable.**
 
+<br>
+
+
 ## Projects
 
-<div align="center">
 
-### Groundlens
+### :traffic_light: Groundlens
 [![Repo](https://img.shields.io/badge/repo-groundlens--dev/groundlens-181717?style=flat&logo=github)](https://github.com/groundlens-dev/groundlens)
 &nbsp;
 
-</div>
 
 The deterministic first stage for RAG and agent loops. It decides what your LLM judge has to look at.
 
 Geometric grounding and hallucination triage for production LLMs in regulated industries. It ranks responses by how faithfully they reflect their sources — **deterministic scores, sub-second, no second LLM in the loop** — so the ones that earned trust pass and the rest go to human review.
 
-<div align="center">
-
 [![Try the live demo](https://img.shields.io/badge/Hugging%20Face-Try%20the%20live%20demo-111111?style=for-the-badge&logo=huggingface&logoColor=FFD21E)](https://huggingface.co/spaces/groundlens/demo)
-
-</div>
 
 > [!TIP]  
 > Run grounding verification in your browser — no install.
 
-<div align="center">
 
-### Groundlens-MCP
+### :electric_plug: Groundlens-MCP
 [![Repo](https://img.shields.io/badge/repo-groundlens--dev/groundlens-181717?style=flat&logo=github)](https://github.com/groundlens-dev/groundlens-mcp)&nbsp;
 
-</div>
 
 MCP server for groundlens — a deterministic first-stage grounding check for Claude Desktop, Cursor, Windsurf, and any MCP-compatible client. It checks whether an answer was drawn from its source, in milliseconds, with no model in the scoring path. Same inputs → same scores, every time.
 
-> [!IMPORTANT]
+> [!NOTE]
 > It is a filter, not a judge. It has a characterized blind spot, and every check says so.
 
 | Tool | Install|
@@ -85,12 +81,10 @@ MCP server for groundlens — a deterministic first-stage grounding check for Cl
 | VS Code | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Add_MCP-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=groundlens&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22groundlens-mcp%22%5D%7D)|
 | VS Code Insiders |  [![Install in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-Add_MCP-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=groundlens&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22groundlens-mcp%22%5D%7D&quality=insiders) |
 
-<div align="center">
 
-### Groundelens Benchmark
+### :signal_strength: Groundelens Benchmark
 [![Repo](https://img.shields.io/badge/repo-groundlens--dev/groundlens-181717?style=flat&logo=github)](https://github.com/groundlens-dev/groundlens-benchmark)&nbsp;
 
-</div>
 
 #### A Methodology for Building Human-Confabulated Hallucination Benchmarks
 
@@ -100,27 +94,22 @@ The consequence is the finding that motivates the dataset. Embedding-similarity 
 
 This dataset is the evidence base for that result. The controlled study built on it, the register-distance dose-response, the authorship shortcut, and the geometric ceiling, is reported in The Register Wall: What Similarity-Based Hallucination Detectors Actually Measure (Marín, 2026; under review).
 
-<div align="center">
 
-### Neural Dimensionality Tracker
+### :microscope: Neural Dimensionality Tracker
 [![Repo](https://img.shields.io/badge/repo-groundlens--dev/ndt-181717?style=flat&logo=github)](https://github.com/groundlens-dev/ndt)
 &nbsp;
 
-</div>
-
 
 High-frequency monitoring of how a neural network's internal representations evolve during training. It tracks representational **dimensionality** across MLPs, CNNs, Transformers and Vision Transformers, and flags discrete phase transitions (jumps) — the same DNA as Groundlens: reading the *geometry of representations* to see what a model is actually doing. Three lines to instrument any PyTorch model.
-
-<div align="center">
-
-
-</div>
 
 ```bash
 pip install ndtracker
 ```
 
-## Research
+<br>
+
+
+## :book: Research
 
 Groundlens is built on peer-reviewed research. Selected publications:
 
@@ -130,11 +119,8 @@ Groundlens is built on peer-reviewed research. Selected publications:
 | 2026 | A Geometric Taxonomy of Hallucinations | [arXiv:2602.13224](https://arxiv.org/abs/2602.13224) |
 | 2025 | Semantic Grounding Index (SGI) | [arXiv:2512.13771](https://arxiv.org/abs/2512.13771) |
 
-<div align="center">
 
 [![Full publication list — Google Scholar](https://img.shields.io/badge/Full%20list-Google%20Scholar-4285F4?style=for-the-badge&logo=googlescholar&logoColor=white)](https://scholar.google.es/citations?user=cqDaAlEAAAAJ&hl=es)
-
-</div>
 
 <br>
 
@@ -142,9 +128,13 @@ Groundlens is built on peer-reviewed research. Selected publications:
 
 Contributions are welcome across all Groundlens repositories. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening an issue or pull request.
 
+<br>
+
 ## License
 
 All Groundlens open-source projects are released under the **APACHE 2.0**. See [LICENSE](LICENSE).
+
+<br>
 
 ## About
 
