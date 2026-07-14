@@ -14,7 +14,7 @@ An open-source practice for <b>trustworthy modeling</b> — making the outputs o
 
 <br>
 
-**[Mission](#mission) · [Groundlens](#groundlens)  · [Tools](#tools)  · [Featured](#featured) · [Publications](#publications) · [About](#about)**
+**[Mission](#mission) · [Projects](#projects)  · [Research](#research)  · [Featured](#featured) · [Contribution](#contribution) · [About](#about)**
 
 </div>
 
@@ -41,7 +41,7 @@ If it can't be verified, it can't be trusted. So we make it verifiable.
   
 <img src="assets/groundlends_logo.png" height="90" alt="Groundlens" />
 
-## Groundlens
+### Groundlens
 
 </div>
 
