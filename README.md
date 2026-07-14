@@ -1,6 +1,6 @@
 <div align="center">
   
-# Groundlens dev: Geometric methods for trustworthy models
+# Groundlens: Geometric methods for trustworthy models
 
 <p>
 An open-source practice for <b>trustworthy modeling</b> — making the outputs of both AI systems and physical systems verifiable.<br>
