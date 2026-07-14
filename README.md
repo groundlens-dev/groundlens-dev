@@ -15,20 +15,22 @@ An open-source practice for <b>trustworthy modeling</b> — making the outputs o
 </div>
 
 ---
+# Table of Contents
 
-[1. Mission](#mission) 
+  - [Mission](#mission) 
 
-[2. Projects](#projects)
+  - [Projects](#projects)
+      - [Groundlens](#groundlens)
+      - [Groundelens MCP](#groundlens-mcp)
+      - [Neural Dimensionality Tracker](#neuraldimensionalitytracker)
 
-[3. Research](#research)
+  - [Research](#research)
 
-[4. Featured](#featured)
+  - [Contributing](#contributing)
 
-[5. Contributing](#contributing)
+  - [License](#license)
 
-[6. License](#license)
-
-[7. About](#about)
+  - [About](#about)
 
 ---
 
@@ -45,17 +47,14 @@ AI is fluent, and fluency hides error. A language model that sounds right and a 
 ## Projects
 
 <div align="center">
-  
-<img src="assets/groundlends_logo.png" height="120" alt="Groundlens" />
 
-### Groundlens: the deterministic first stage for RAG and agent loops. </br> It decides what your LLM judge has to look at.
-
+### Groundlens
 [![Repo](https://img.shields.io/badge/repo-groundlens--dev/groundlens-181717?style=flat&logo=github)](https://github.com/groundlens-dev/groundlens)
-&nbsp;[![Stars](https://img.shields.io/github/stars/groundlens-dev/groundlens?label=%E2%98%85)](https://github.com/groundlens-dev/groundlens/stargazers)
-
-[`groundlens`](https://github.com/groundlens-dev/groundlens) · [`grounding-benchmark`](https://github.com/groundlens-dev/grounding-benchmark) · [`groundlens-mcp`](https://github.com/groundlens-dev/groundlens-mcp) · [`Groundlens-Cookbook`](https://github.com/groundlens-dev/Groundlens-Cookbook)
+&nbsp;
 
 </div>
+
+The deterministic first stage for RAG and agent loops. It decides what your LLM judge has to look at.
 
 Geometric grounding and hallucination triage for production LLMs in regulated industries. It ranks responses by how faithfully they reflect their sources — **deterministic scores, sub-second, no second LLM in the loop** — so the ones that earned trust pass and the rest go to human review.
 
@@ -68,16 +67,52 @@ Geometric grounding and hallucination triage for production LLMs in regulated in
 > [!TIP]  
 > Run grounding verification in your browser — no install.
 
+<div align="center">
 
-### ndt — Neural Dimensionality Tracker
+### Groundlens-MCP
+[![Repo](https://img.shields.io/badge/repo-groundlens--dev/groundlens-181717?style=flat&logo=github)](https://github.com/groundlens-dev/groundlens-mcp)&nbsp;
+
+</div>
+
+MCP server for groundlens — a deterministic first-stage grounding check for Claude Desktop, Cursor, Windsurf, and any MCP-compatible client. It checks whether an answer was drawn from its source, in milliseconds, with no model in the scoring path. Same inputs → same scores, every time.
+
+> [!IMPORTANT]
+> It is a filter, not a judge. It has a characterized blind spot, and every check says so.
+
+| Tool | Install|
+|------|---------------|
+| Cursor | [![Install in Cursor](https://img.shields.io/badge/Cursor-Add_MCP-000000?style=flat-square&logo=cursor&logoColor=white)](https://cursor.com/install-mcp?name=groundlens&config=eyJjb21tYW5kIjoidXZ4IiwiYXJncyI6WyJncm91bmRsZW5zLW1jcCJdfQ%3D%3D)|
+| VS Code | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Add_MCP-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=groundlens&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22groundlens-mcp%22%5D%7D)|
+| VS Code Insiders |  [![Install in VS Code Insiders](https://img.shields.io/badge/VS_Code_Insiders-Add_MCP-24bfa5?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=groundlens&config=%7B%22command%22%3A%22uvx%22%2C%22args%22%3A%5B%22groundlens-mcp%22%5D%7D&quality=insiders) |
+
+<div align="center">
+
+### Groundelens Benchmark
+[![Repo](https://img.shields.io/badge/repo-groundlens--dev/groundlens-181717?style=flat&logo=github)](https://github.com/groundlens-dev/groundlens-benchmark)&nbsp;
+
+</div>
+
+#### A Methodology for Building Human-Confabulated Hallucination Benchmarks
+
+Almost every hallucination benchmark generates its false content by prompting an LLM. This one does not. A non-expert writes the false response from memory, without consulting any source, producing a confabulation in the neuropsychological sense (Berlyne, 1972): confident, domain-appropriate, and wrong.
+
+The consequence is the finding that motivates the dataset. Embedding-similarity detectors that reach 88–97% on LLM-generated benchmarks fall to 69–78% on these human confabulations, and on the in-register cases (template-structured domains) they fall to chance. The false responses stay inside the distributional register of their domain, and a detector that scores grounding by embedding similarity cannot tell them apart from correct answers. This is a property of the embedding geometry, not a tuning gap.
+
+This dataset is the evidence base for that result. The controlled study built on it, the register-distance dose-response, the authorship shortcut, and the geometric ceiling, is reported in The Register Wall: What Similarity-Based Hallucination Detectors Actually Measure (Marín, 2026; under review).
+
+<div align="center">
+
+### Neural Dimensionality Tracker
+[![Repo](https://img.shields.io/badge/repo-groundlens--dev/ndt-181717?style=flat&logo=github)](https://github.com/groundlens-dev/ndt)
+&nbsp;
+
+</div>
+
 
 High-frequency monitoring of how a neural network's internal representations evolve during training. It tracks representational **dimensionality** across MLPs, CNNs, Transformers and Vision Transformers, and flags discrete phase transitions (jumps) — the same DNA as Groundlens: reading the *geometry of representations* to see what a model is actually doing. Three lines to instrument any PyTorch model.
 
 <div align="center">
 
-[![Repo](https://img.shields.io/badge/repo-groundlens--dev/ndt-181717?style=flat&logo=github)](https://github.com/groundlens-dev/ndt)
-&nbsp;[![Stars](https://img.shields.io/github/stars/groundlens-dev/ndt?label=%E2%98%85)](https://github.com/groundlens-dev/ndt/stargazers)
-&nbsp;[![PyPI](https://img.shields.io/pypi/v/ndtracker?label=ndtracker)](https://pypi.org/project/ndtracker/)
 
 </div>
 
@@ -89,13 +124,11 @@ pip install ndtracker
 
 Groundlens is built on peer-reviewed research. Selected publications:
 
-| Year | Publication | Venue / link |
+| Year | Publication | Link |
 |---|---|---|
 | 2026 | Rotational Dynamics of Factual Constraint Processing | [arXiv:2603.13259](https://arxiv.org/abs/2603.13259) |
 | 2026 | A Geometric Taxonomy of Hallucinations | [arXiv:2602.13224](https://arxiv.org/abs/2602.13224) |
 | 2025 | Semantic Grounding Index (SGI) | [arXiv:2512.13771](https://arxiv.org/abs/2512.13771) |
-| 2025 | Hamiltonian Neural Networks for Out-of-Time Credit Scoring - accepted (peer-reviewed), IEEE DSAA 2025| [arXiv:2410.10182](https://arxiv.org/abs/2410.10182)|
-| 2024 | Optimizing AI Reasoning: A Hamiltonian Dynamics Approach to Multi-Hop QA | [arXiv:2410.04415](https://arxiv.org/abs/2410.04415) |
 
 <div align="center">
 
@@ -104,21 +137,6 @@ Groundlens is built on peer-reviewed research. Selected publications:
 </div>
 
 <br>
-
-## Featured
-
-<div align="center">
-
-<a href="https://www.linkedin.com/feed/update/urn:li:share:7407335601592741888/">
-  <img src="assets/Linkedin_post.png" width="400" alt="Featured LinkedIn post — 100,000+ impressions" />
-</a>
-
-<sub><b>100,000+ impressions</b> · <a href="https://www.linkedin.com/feed/update/urn:li:share:7407335601592741888/">read it on LinkedIn</a></sub>
-
-</div>
-
-<br>
-
 
 ## Contributing
 
