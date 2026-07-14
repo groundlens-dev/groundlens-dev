@@ -14,19 +14,12 @@ An open-source practice for <b>trustworthy modeling</b> — making the outputs o
 
 <br>
 
-**[Mission](#mission) · [Projects](#projects)  · [Research](#research)  · [Featured](#featured) · [Contribution](#contribution) · [About](#about)**
+**[Mission](#mission) · [Projects](#projects)  · [Research](#research)  · [Featured](#featured) · [Contributing](#contributing) · [About](#about)**
 
 </div>
 
 ---
-## Mission
-
-<div align="center">
-  
-*We turn "trust me" into "check me."*
-
-</div>
-
+## Mission: We turn "trust me" into "check me.
 AI is fluent, and fluency hides error. A language model that sounds right and a black-box predictor that fits the data can both be confidently wrong — and neither can prove otherwise. Groundlens builds the layer that checks: every claim measured against ground truth you can inspect — the source it cited, the physics it must obey, the geometry of its own representations. No second opaque model casting a vote. Deterministic, reproducible, the same verdict every time.
 
 If it can't be verified, it can't be trusted. So we make it verifiable.
@@ -41,7 +34,7 @@ If it can't be verified, it can't be trusted. So we make it verifiable.
   
 <img src="assets/groundlends_logo.png" height="90" alt="Groundlens" />
 
-### Groundlens
+### Groundlens: the deterministic first stage for RAG and agent loops. It decides what your LLM judge has to look at.
 
 </div>
 
@@ -62,18 +55,6 @@ Geometric grounding and hallucination triage for production LLMs in regulated in
 
 [`groundlens`](https://github.com/groundlens-dev/groundlens) · [`grounding-benchmark`](https://github.com/groundlens-dev/grounding-benchmark) · [`groundlens-mcp`](https://github.com/groundlens-dev/groundlens-mcp) · [`Groundlens-Cookbook`](https://github.com/groundlens-dev/Groundlens-Cookbook)
 
-### Groundlens research
-
-The methods are not heuristics — they come from published work.
-
-| Paper | Idea | Link |
-|---|---|---|
-| **Semantic Grounding Index (SGI)** | Ratio-based grounding verification for RAG — measures whether a response engages its source via angular geometry on the unit hypersphere. | [![arXiv](https://img.shields.io/badge/arXiv-2512.13771-b31b1b)](https://arxiv.org/abs/2512.13771) |
-| **A Geometric Taxonomy of Hallucinations** | Three-type hallucination classification via directional grounding (von Mises–Fisher on displacement vectors); domain calibration reaches AUROC 0.76–0.99. | [![arXiv](https://img.shields.io/badge/arXiv-2602.13224-b31b1b)](https://arxiv.org/abs/2602.13224) |
-| **Rotational Dynamics of Factual Constraint Processing** | Transformers reject wrong answers by *rotating* the representation, not rescaling — with a phase transition at ~1.6B parameters. | [![arXiv](https://img.shields.io/badge/arXiv-2603.13259-b31b1b)](https://arxiv.org/abs/2603.13259) |
-
-<br>
-
 ### ndt — Neural Dimensionality Tracker
 
 High-frequency monitoring of how a neural network's internal representations evolve during training. It tracks representational **dimensionality** across MLPs, CNNs, Transformers and Vision Transformers, and flags discrete phase transitions (jumps) — the same DNA as Groundlens: reading the *geometry of representations* to see what a model is actually doing. Three lines to instrument any PyTorch model.
@@ -88,22 +69,7 @@ pip install ndtracker
 
 <br>
 
-
-## Featured
-
-<div align="center">
-
-<a href="https://www.linkedin.com/feed/update/urn:li:share:7407335601592741888/">
-  <img src="assets/Linkedin_post.png" width="500" alt="Featured LinkedIn post — 100,000+ impressions" />
-</a>
-
-<sub><b>100,000+ impressions</b> · <a href="https://www.linkedin.com/feed/update/urn:li:share:7407335601592741888/">read it on LinkedIn</a></sub>
-
-</div>
-
-<br>
-
-## Related Publications
+## Research
 
 Groundlens is built on peer-reviewed research. Selected publications:
 
@@ -123,17 +89,24 @@ Groundlens is built on peer-reviewed research. Selected publications:
 
 <br>
 
+## Featured
+
+<div align="center">
+
+<a href="https://www.linkedin.com/feed/update/urn:li:share:7407335601592741888/">
+  <img src="assets/Linkedin_post.png" width="500" alt="Featured LinkedIn post — 100,000+ impressions" />
+</a>
+
+<sub><b>100,000+ impressions</b> · <a href="https://www.linkedin.com/feed/update/urn:li:share:7407335601592741888/">read it on LinkedIn</a></sub>
+
+</div>
+
+<br>
+
+
 ## Contributing
 
 Contributions are welcome across all Groundlens repositories. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening an issue or pull request.
-
-## Code of Conduct
-
-This community follows the Contributor Covenant. See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
-
-## Security
-
-To report a vulnerability, please follow the process in [SECURITY.md](SECURITY.md) — do not open a public issue for security matters.
 
 ## License
 
