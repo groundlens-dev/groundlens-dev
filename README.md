@@ -16,19 +16,19 @@ An open-source practice for <b>trustworthy modeling</b> — making the outputs o
 
 ---
 
-[- Mission](#mission) 
+[1. Mission](#mission) 
 
-[- Projects](#projects)
+[2. Projects](#projects)
 
-[- Research](#research)
+[3. Research](#research)
 
-[- Featured](#featured)
+[4. Featured](#featured)
 
-[- Contributing](#contributing)
+[5. Contributing](#contributing)
 
-[- License](#license)
+[6. License](#license)
 
-[- About](#about)
+[7. About](#about)
 
 ---
 
