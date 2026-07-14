@@ -2,8 +2,6 @@
   
 # Groundlens dev: Geometric methods for trustworthy models
 
-
-
 <p>
 An open-source practice for <b>trustworthy modeling</b> — making the outputs of both AI systems and physical systems verifiable.<br>
 </p>
@@ -14,12 +12,33 @@ An open-source practice for <b>trustworthy modeling</b> — making the outputs o
 
 <br>
 
-**[Mission](#mission) · [Projects](#projects)  · [Research](#research)  · [Featured](#featured) · [Contributing](#contributing) · [About](#about)**
-
 </div>
 
 ---
-## Mission: We turn "trust me" into "check me.
+
+[- Mission](#mission) 
+
+[- Projects](#projects)
+
+[- Research](#research)
+
+[- Featured](#featured)
+
+[- Contributing](#contributing)
+
+[- License](#license)
+
+[- About](#about)
+
+---
+
+## Mission
+<div align="center">
+  
+*We turn "trust me" into "check me.*
+
+</div>
+
 AI is fluent, and fluency hides error. A language model that sounds right and a black-box predictor that fits the data can both be confidently wrong — and neither can prove otherwise. Groundlens builds the layer that checks: every claim measured against ground truth you can inspect — the source it cited, the physics it must obey, the geometry of its own representations. No second opaque model casting a vote. Deterministic, reproducible, the same verdict every time.
 
 If it can't be verified, it can't be trusted. So we make it verifiable.
