@@ -14,7 +14,7 @@ An open-source practice for <b>trustworthy modeling</b> — making the outputs o
 
 <br>
 
-**[Mission](#mission) · [Groundlens](#groundlens) · [Otwin](#otwin) · [Tools](#tools) · [Research lines](#research-lines) · [Featured](#featured) · [Publications](#publications) · [About](#about)**
+**[Mission](#mission) · [Groundlens](#groundlens)  · [Tools](#tools)  · [Featured](#featured) · [Publications](#publications) · [About](#about)**
 
 </div>
 
@@ -34,9 +34,6 @@ If it can't be verified, it can't be trusted. So we make it verifiable.
 ## Projects
 
 - **Groundlens** — verifies **what a language model says**, using the geometry of embeddings.
-- **Otwin** — models **how a physical system behaves**, using the geometry of energy (port-Hamiltonian structure) with calibrated uncertainty.
-
-Both are MIT-licensed and built to be auditable.
 
 <br>
 
@@ -77,36 +74,6 @@ The methods are not heuristics — they come from published work.
 
 <br>
 
-<div align="center">
-  
-<img src="assets/otwin_logo_new.png" height="90" alt="Otwin" />
-
-## Otwin
-
-</div>
-
-### Physics-informed digital twins- IEEE PES General Meeting 2026
-
-Digital twins with **calibrated uncertainty** for grid-scale energy storage and other physical systems. You bring the physical *model structure* you know (a port-Hamiltonian system, or an empirical law); Otwin estimates the rest from data, attaches horizon-aware uncertainty intervals, and validates without leakage against mandatory baselines. Lightweight and CPU-first, spanning **white-box** (full physics) to **grey-box** (physics + estimated residual).
-
-[![Repo](https://img.shields.io/badge/repo-groundlens--dev/otwin-181717?style=flat&logo=github)](https://github.com/groundlens-dev/otwin)
-&nbsp;[![Stars](https://img.shields.io/github/stars/groundlens-dev/otwin?label=%E2%98%85)](https://github.com/groundlens-dev/otwin/stargazers)
-&nbsp;Presented at **IEEE PES General Meeting 2026** — *AI-powered Digital Twins for Grid-Scale Storage*.
-
-| Problem | Result |
-|---|---|
-| **Water tank** · first-principles (white-box). A draining tank written as a port-Hamiltonian system — can a structure-preserving forecast stay physical at any horizon? | <img src="https://raw.githubusercontent.com/groundlens-dev/otwin/main/examples/water_tank_phs/figures/water_tank_dynamics.png" width="400" alt="Water tank dynamics" /><br><sub>Energy decays monotonically (passive by construction); skill ≈ 0.94 vs a persistence baseline.</sub> |
-| **DC motor** · first-principles, multi-domain. Coupled electrical + mechanical actuator — can the twin predict it with no fitting? | <img src="https://raw.githubusercontent.com/groundlens-dev/otwin/main/examples/dc_motor/figures/dc_motor_response.png" width="400" alt="DC motor response" /><br><sub>Numeric steady state matches the closed-form ω, I to within 0.001%.</sub> |
-| **Pumped-hydro storage** · white-box, grid-scale. The dominant grid storage technology — how much energy survives a charge/discharge cycle? | <img src="https://raw.githubusercontent.com/groundlens-dev/otwin/main/examples/pumped_hydro/figures/pumped_hydro_energy.png" width="400" alt="Pumped-hydro energy and round-trip efficiency" /><br><sub>Round-trip efficiency matches the closed form η<sub>p</sub>·η<sub>t</sub>; energy conserved while idle.</sub> |
-| **Battery State-of-Health** · grey-box. Forecast Li-ion SoH / remaining useful life with trustworthy intervals (predictive maintenance). | <img src="https://raw.githubusercontent.com/groundlens-dev/otwin/main/examples/battery_soh/figures/01_hero_forecast.png" width="400" alt="Battery State-of-Health forecast" /><br><sub>The physics-informed hybrid tracks the real decay to end-of-life; a data-only model diverges. The 90% band is calibrated.</sub> |
-| **Grid-scale dispatch** · predictive maintenance → real-time optimization. Dispatch storage under uncertain capacity. | <img src="https://raw.githubusercontent.com/groundlens-dev/otwin/main/examples/grid_storage_dispatch/figures/01_arbitrage_trajectories.png" width="400" alt="Grid storage dispatch under uncertain capacity" /><br><sub>The calibrated-UQ plan leaves <b>0.0 MWh</b> of demand unmet over the horizon, vs 55.6 MWh for a naive plan.</sub> |
-
-<br>
-
-## Tools
-
-Smaller, focused utilities that support the projects above.
-
 ### ndt — Neural Dimensionality Tracker
 
 High-frequency monitoring of how a neural network's internal representations evolve during training. It tracks representational **dimensionality** across MLPs, CNNs, Transformers and Vision Transformers, and flags discrete phase transitions (jumps) — the same DNA as Groundlens: reading the *geometry of representations* to see what a model is actually doing. Three lines to instrument any PyTorch model.
@@ -121,19 +88,6 @@ pip install ndtracker
 
 <br>
 
-## Research lines
-
-Code-backed research that feeds the projects above — published, with the limits stated.
-
-### hamiltonian-ai — symmetry, invariance, and structure in neural optimization
-
-A symplectic optimizer for out-of-time ranking under class imbalance, phase-space diagnostics that separate valid from invalid LLM reasoning, and a systematic study of where geometric structure stops helping. The same DNA as the rest of Groundlens: read the geometry, state the limits.
-
-[![Repo](https://img.shields.io/badge/repo-groundlens--dev/hamiltonian--ai-181717?style=flat&logo=github)](https://github.com/groundlens-dev/hamiltonian-ai)
-&nbsp;[![Stars](https://img.shields.io/github/stars/groundlens-dev/hamiltonian-ai?label=%E2%98%85)](https://github.com/groundlens-dev/hamiltonian-ai/stargazers)
-&nbsp;[![arXiv](https://img.shields.io/badge/arXiv-2410.04415-b31b1b)](https://arxiv.org/abs/2410.04415)
-
-<br>
 
 ## Featured
 
@@ -183,7 +137,7 @@ To report a vulnerability, please follow the process in [SECURITY.md](SECURITY.m
 
 ## License
 
-All Groundlens open-source projects are released under the **MIT License**. See [LICENSE](LICENSE).
+All Groundlens open-source projects are released under the **APACHE 2.0**. See [LICENSE](LICENSE).
 
 ## About
 
