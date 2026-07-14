@@ -136,8 +136,3 @@ All Groundlens open-source projects are released under the **APACHE 2.0**. See [
 **Groundlens** is an independent open-source practice for trustworthy modeling, working at the intersection of applied geometry, physics, and machine learning. Its two lines — Groundlens (LLM verification) and Otwin (physics-informed digital twins) — share a single goal: outputs you can audit before they reach production.
 
 Maintained by [Javier Marin](https://www.linkedin.com/in/javiermarinvalenzuela/) · Madrid · [javier@groundlens.dev](mailto:javier@groundlens.dev) · [groundlens.dev](https://groundlens.dev)
-
-<div align="center">
-<br>
-<sub>Verification over capability.</sub>
-</div>
