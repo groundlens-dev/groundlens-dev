@@ -1,19 +1,26 @@
 <div align="center">
   <img src="assets/Logo_groundlens_dev.png" alt="Groundlens" width="180">
 
-# Groundlens: Open tools for verifying language models and agents outputs
+# Groundlens: open sourcce tools for verifying language models and agents outputs
 
 [![Website](https://img.shields.io/badge/groundlens.dev-fc7604?style=for-the-badge&logo=astro&logoColor=white)](https://groundlens.dev)
-[![Live demo](https://img.shields.io/badge/Hugging%20Face-Live%20demo-111111?style=for-the-badge&logo=huggingface&logoColor=FFD21E)](https://huggingface.co/spaces/groundlens/demo)
 [![License: Apache 2.0](https://img.shields.io/badge/License-apache--2.0-9a5416?style=for-the-badge)](LICENSE)
 
-</div>
+**We turn "trust me" into "check me."**
 
-##We turn "trust me" into "check me."
+</div>
 
 "Trust me" is not an answer when the stakes are real. So these tools do one thing, cheaply and the same way every time: they tell you whether a machine's answer actually came from the source it was supposed to use.
 
 They read the geometry of the answer, not a second model's opinion, so the clear cases pass in milliseconds and only the doubtful ones cost you a person or a heavier check.
+
+## Try our online demo
+
+<div align="center">
+
+[![Live demo](https://img.shields.io/badge/Hugging%20Face-Live%20demo-111111?style=for-the-badge&logo=huggingface&logoColor=FFD21E)](https://huggingface.co/spaces/groundlens/demo)
+
+</div>
 
 ## How to use groundlens
 
@@ -32,21 +39,13 @@ That is [**groundlens**](https://github.com/groundlens-dev/groundlens). Determin
 - **Want to see the components working together on a real pipeline?**
 The [**Cookbook**](https://github.com/groundlens-dev/Groundlens-Cookbook) has executable notebooks: what each check settles, and what it hands on.
 
-- **Curious about our numbers?**
-Start with [what we withdrew](#what-we-withdrew) and the [confound table](#what-the-benchmarks-give-away-for-free), then the [benchmarks page](https://docs.groundlens.dev/benchmarks/results/). Every metric ships with its measured ceiling.
-
-- **Want to try it without installing anything?**
-The [live demo](https://huggingface.co/spaces/groundlens/demo).
-
 - **Want to know the research where these methods como from?**
-[**Research**](https://github.com/groundlens-dev/groundlens-dev/Research.md) 
+[**Research**](https://github.com/groundlens-dev/groundlens-dev/RESEARCH.md) 
 
---- 
 
-If you are checking generated output in a pipeline that matters, and paying for it in tokens or in people, the problem is interesting to us.
-Contact: javier@groundlens.dev](mailto:javier@groundlens.dev). 
+*If you are checking generated output in a pipeline that matters, and paying for it in tokens or in people, the problem is interesting to us.
+Contact: [javier@groundlens.dev](mailto:javier@groundlens.dev).* 
 
----
 
 ## Contributing
 
