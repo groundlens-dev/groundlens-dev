@@ -6,7 +6,7 @@
 [![Website](https://img.shields.io/badge/groundlens.dev-fc7604?style=for-the-badge&logo=astro&logoColor=white)](https://groundlens.dev)
 [![License: Apache 2.0](https://img.shields.io/badge/License-apache--2.0-9a5416?style=for-the-badge)](LICENSE)
 
-# We turn "trust me" into "check me."
+## We turn "trust me" into "check me."
 
 </div>
 
