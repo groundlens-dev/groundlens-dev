@@ -1,6 +1,5 @@
 <div align="center">
-  <img src="assets/Logo_groundlens_dev.png" alt="Groundlens" width="180">
-
+  
 # Groundlens: open source tools for verifying language models and agents outputs
 
 [![Website](https://img.shields.io/badge/groundlens.dev-fc7604?style=for-the-badge&logo=astro&logoColor=white)](https://groundlens.dev)
