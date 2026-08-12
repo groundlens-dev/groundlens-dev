@@ -1,59 +1,91 @@
 <div align="center">
   
-# Groundlens: open source tools for verifying language models and agents outputs
+<img src="https://raw.githubusercontent.com/groundlens-dev/groundlens/main/docs/assets/Groundlens_01.png" width="22%">
 
-[![Website](https://img.shields.io/badge/groundlens.dev-fc7604?style=for-the-badge&logo=astro&logoColor=white)](https://groundlens.dev)
-[![License: Apache 2.0](https://img.shields.io/badge/License-apache--2.0-9a5416?style=for-the-badge)](LICENSE)
-
-## We turn "trust me" into "check me."
+# Groundlens: A proofreader for RAG answers
 
 </div>
 
-"Trust me" is not an answer when the stakes are real. So these tools do one thing, cheaply and the same way every time: they tell you whether a machine's answer actually came from the source it was supposed to use.
+Give it an answer and the passages it was supposed to be written from. It hands
+back the words those passages do not support, and next to each one, the closest
+thing it found in your sources.
 
-They read the geometry of the answer, not a second model's opinion, so the clear cases pass in milliseconds and only the doubtful ones cost you a person or a heavier check.
+```
+4.75%   support 0.00    nearest in policy.pdf#p3: '3.90%'
+45      support 0.00    nearest in policy.pdf#p3: '30'
+```
 
-## Try our online demo
+Two marks in a margin. What to do about them stays your call.
+
+## Why we built it
+
+We measured nine hallucination detectors across five benchmarks — 45
+combinations — at the operating point production actually runs at: the
+false-alarm rate you pay to catch 95% of hallucinations. The best of the 45 was
+0.65. Two out of every three correct answers flagged for review.
+
+Then we took one of those detectors and deleted the source documents before
+running it again. It kept most of its ranking ability without them. Much of what
+these systems detect is something other than grounding.
+
+So we stopped trying to produce a verdict. There is no good one to give.
+groundlens ships no threshold, no pass, no fail, no probability. It marks the
+words and names the source span each one lost to, and leaves the judgement where
+it already was — with the person who has to sign the document.
+
+## How it reads
+
+Two channels, because there are two kinds of content.
+
+**Words are checked by meaning.** How close a word gets to anything in your
+sources.
+
+**Numbers are checked by arithmetic.** Parsed to a value, formatting normalised,
+then present in the sources or absent. Nothing in between.
+
+The second channel exists because the first one cannot do that job. Change
+10,000 to 1,000 in a sentence and the meaning barely moves — but for a reviewer
+at a bank, that digit is the entire document.
+
+The figure for a whole answer is its **weakest** anchor, never the average. An
+average is where one wrong number among sixty correct words goes to hide.
+
+## Who it is for
+
+A reviewer at a bank, an insurer, a law firm, a benefits agency — anywhere a
+retrieval system drafts something a human has to sign. They have an answer,
+three retrieved passages, and no time to read all four documents. That check
+takes five minutes today and mostly gets skipped. With marks in the margin it
+takes thirty seconds and gets done.
+
+The human stays in the picture. The measurements above are what happens when you
+try to remove them.
+
+## The repositories
+
+**[groundlens](https://github.com/groundlens-dev/groundlens)** — the library.
+`pip install groundlens`, zero runtime dependencies, Apache-2.0.
+
+**[groundlens-mcp](https://github.com/groundlens-dev/groundlens-mcp)** — the
+connector, so an assistant can proofread an answer without leaving the
+conversation.
+
+**[groundlens.site](https://github.com/groundlens-dev/groundlens.site)** — the
+source of [groundlens.dev](https://groundlens.dev).
+
+## Start here
+
+```bash
+pip install "groundlens[encoder]"
+groundlens read --answer answer.txt --context policy.pdf#p3=policy.txt
+```
+
+Thirty seconds and you will know whether this is useful to you. That is the
+honest length of the pitch.
 
 <div align="center">
 
-[![Live demo](https://img.shields.io/badge/Hugging%20Face-Live%20demo-111111?style=for-the-badge&logo=huggingface&logoColor=FFD21E)](https://huggingface.co/spaces/groundlens/demo)
-
-</div>
-
-## How to use groundlens
-
-- **Want to check whether an answer actually came from the document you gave the model?**
-That is [**groundlens**](https://github.com/groundlens-dev/groundlens). Deterministic scores in milliseconds, no second model in the loop, the same result every time. It is the first stage: it decides what your expensive check has to look at.
-
-- **Want that check running while you work, inside Claude Desktop, Cursor or Windsurf?**
-[**groundlens-mcp**](https://github.com/groundlens-dev/groundlens-mcp) prints a reading under each answer as it arrives. It is a filter, not a judge, and every reading says so.
-
-- **Have to show a supervisor that an answer followed a policy, with the evidence attached?**
-[**groundlens-rules**](https://github.com/groundlens-dev/groundlens-rules) is hand-authored checklists that carry the text that triggered them. No model, no dependencies, and it never claims to be a measurement.
-
-- **Want to know what these detectors actually measure, and where they stop working?**
-[**grounding-benchmark**](https://github.com/groundlens-dev/grounding-benchmark) writes its false answers by hand rather than prompting a model for them, which is the case similarity-based detection finds hardest. Read the datasheet before quoting a number from it.
-
-- **Want to see the components working together on a real pipeline?**
-The [**Cookbook**](https://github.com/groundlens-dev/Groundlens-Cookbook) has executable notebooks: what each check settles, and what it hands on.
-
-- **Want to know the research where these methods como from?**
-[**Research**](https://github.com/groundlens-dev/groundlens-dev/RESEARCH.md) 
+[![License: Apache 2.0](https://img.shields.io/badge/License-apache--2.0-9a5416?style=for-the-badge)](LICENSE)
 
 
-*If you are checking generated output in a pipeline that matters, and paying for it in tokens or in people, the problem is interesting to us.
-Contact: [javier@groundlens.dev](mailto:javier@groundlens.dev).* 
-
-
-## Contributing
-
-Contributions are welcome across every repository. If you think a number here is wrong, open an issue with the reproduction — corrections get fixed and credited in the commit. Read [CONTRIBUTING.md](CONTRIBUTING.md) first.
-
-## License
-
-Everything here is Apache 2.0. See [LICENSE](LICENSE).
-
-## About
-
-Groundlens is an independent open-source practice for trustworthy modeling, working where applied geometry meets machine learning. Maintained by [Javier Marin](https://www.linkedin.com/in/javiermarinvalenzuela/) · [javier@groundlens.dev](mailto:javier@groundlens.dev) · [groundlens.dev](https://groundlens.dev)
+Groundlens is an independent open-source practice for trustworthy models. Maintained by [Javier Marin](https://www.linkedin.com/in/javiermarinvalenzuela/) · [javier@groundlens.dev](mailto:javier@groundlens.dev) · [groundlens.dev](https://groundlens.dev)
