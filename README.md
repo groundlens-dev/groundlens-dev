@@ -1,13 +1,15 @@
 <div align="center">
   
-<img src="https://raw.githubusercontent.com/groundlens-dev/groundlens/main/docs/assets/Groundlens_01.png" width="22%">
+<img src="https://raw.githubusercontent.com/groundlens-dev/groundlens/main/docs/assets/Groundlens_01.png" width="15%">
 
 # Groundlens: A proofreader for RAG answers
 
-<br>
-
-
 [![License: Apache 2.0](https://img.shields.io/badge/License-apache--2.0-9a5416?style=for-the-badge)](LICENSE)
+[![OpenSSF Best Practices](https://img.shields.io/cii/summary/13390?label=OpenSSF%20Best%20Practices&style=for-the-badge)](https://www.bestpractices.dev/projects/13390)
+
+MCP Server
+
+[![groundlens MCP server](https://glama.ai/mcp/servers/groundlens-dev/groundlens/badges/card.svg)](https://glama.ai/mcp/servers/groundlens-dev/groundlens)
 
 
 </div>
