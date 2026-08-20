@@ -61,17 +61,6 @@ takes thirty seconds and gets done.
 The human stays in the picture. The measurements above are what happens when you
 try to remove them.
 
-## The repositories
-
-**[groundlens](https://github.com/groundlens-dev/groundlens)** — the library.
-`pip install groundlens`, zero runtime dependencies, Apache-2.0.
-
-**[groundlens-mcp](https://github.com/groundlens-dev/groundlens-mcp)** — the
-connector, so an assistant can proofread an answer without leaving the
-conversation.
-
-**[groundlens.site](https://github.com/groundlens-dev/groundlens.site)** — the
-source of [groundlens.dev](https://groundlens.dev).
 
 ## Start here
 
@@ -80,8 +69,6 @@ pip install "groundlens[encoder]"
 groundlens read --answer answer.txt --context policy.pdf#p3=policy.txt
 ```
 
-Thirty seconds and you will know whether this is useful to you. That is the
-honest length of the pitch.
 
 <div align="center">
 
