@@ -4,18 +4,28 @@
 
 # Groundlens: A proofreader for RAG answers
 
+<br>
+
+
+[![License: Apache 2.0](https://img.shields.io/badge/License-apache--2.0-9a5416?style=for-the-badge)](LICENSE)
+
+
 </div>
+
+<br>
 
 Give it an answer and the passages it was supposed to be written from. It hands
 back the words those passages do not support, and next to each one, the closest
 thing it found in your sources.
 
-```
+```python
 4.75%   support 0.00    nearest in policy.pdf#p3: '3.90%'
 45      support 0.00    nearest in policy.pdf#p3: '30'
 ```
 
 Two marks in a margin. What to do about them stays your call.
+
+<br>
 
 ## Why we built it
 
@@ -32,6 +42,8 @@ So we stopped trying to produce a verdict. There is no good one to give.
 groundlens ships no threshold, no pass, no fail, no probability. It marks the
 words and names the source span each one lost to, and leaves the judgement where
 it already was — with the person who has to sign the document.
+
+<br>
 
 ## How it reads
 
@@ -50,6 +62,8 @@ at a bank, that digit is the entire document.
 The figure for a whole answer is its **weakest** anchor, never the average. An
 average is where one wrong number among sixty correct words goes to hide.
 
+<br>
+
 ## Who it is for
 
 A reviewer at a bank, an insurer, a law firm, a benefits agency — anywhere a
@@ -61,6 +75,7 @@ takes thirty seconds and gets done.
 The human stays in the picture. The measurements above are what happens when you
 try to remove them.
 
+<br>
 
 ## Start here
 
@@ -70,9 +85,6 @@ groundlens read --answer answer.txt --context policy.pdf#p3=policy.txt
 ```
 
 
-<div align="center">
-
-[![License: Apache 2.0](https://img.shields.io/badge/License-apache--2.0-9a5416?style=for-the-badge)](LICENSE)
-
+<br>
 
 Groundlens is an independent open-source practice for trustworthy models. Maintained by [Javier Marin](https://www.linkedin.com/in/javiermarinvalenzuela/) · [javier@groundlens.dev](mailto:javier@groundlens.dev) · [groundlens.dev](https://groundlens.dev)
