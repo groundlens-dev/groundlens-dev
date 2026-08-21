@@ -1,16 +1,12 @@
 <div align="center">
   
-<img src="https://raw.githubusercontent.com/groundlens-dev/groundlens/main/docs/assets/Groundlens_01.png" width="15%">
+<img src="https://raw.githubusercontent.com/groundlens-dev/groundlens/main/docs/assets/Groundlens_01.png" width="20%">
 
 # Groundlens: A proofreader for RAG answers
 
+<br>
+
 [![License: Apache 2.0](https://img.shields.io/badge/License-apache--2.0-9a5416?style=for-the-badge)](LICENSE)
-[![OpenSSF Best Practices](https://img.shields.io/cii/summary/13390?label=OpenSSF%20Best%20Practices&style=for-the-badge)](https://www.bestpractices.dev/projects/13390)
-
-MCP Server
-
-[![groundlens MCP server](https://glama.ai/mcp/servers/groundlens-dev/groundlens/badges/card.svg)](https://glama.ai/mcp/servers/groundlens-dev/groundlens)
-
 
 </div>
 
@@ -89,4 +85,14 @@ groundlens read --answer answer.txt --context policy.pdf#p3=policy.txt
 
 <br>
 
-Groundlens is an independent open-source practice for trustworthy models. Maintained by [Javier Marin](https://www.linkedin.com/in/javiermarinvalenzuela/) · [javier@groundlens.dev](mailto:javier@groundlens.dev) · [groundlens.dev](https://groundlens.dev)
+> Groundlens is an independent open-source project created and maintained by Javier Marín · [javier@groundlens.dev](mailto:javier@groundlens.dev)
+
+<br>
+
+<div align=center>
+  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourusername) [![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/jamarinval)
+
+[groundlens.dev](https://groundlens.dev)
+
+</div>
