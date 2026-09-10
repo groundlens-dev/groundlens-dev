@@ -1,98 +1,134 @@
 <div align="center">
-  
-<img src="https://raw.githubusercontent.com/groundlens-dev/groundlens/main/docs/assets/Groundlens_01.png" width="20%">
 
-# Groundlens: A proofreader for RAG answers
+<img src="https://raw.githubusercontent.com/groundlens-dev/groundlens/main/docs/assets/groundlens_header.png">
+
+<br> 
+
+<p align="center">
+  <a href="https://github.com/groundlens-dev/groundlens/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue" alt="Apache-2.0"></a>
+  <a href="https://www.bestpractices.dev/projects/13390"><img src="https://www.bestpractices.dev/projects/13390/badge" alt="OpenSSF Best Practices"></a>
+  <a href="https://scorecard.dev/viewer/?uri=github.com/groundlens-dev/groundlens"><img src="https://api.securityscorecards.dev/projects/github.com/groundlens-dev/groundlens/badge" alt="OpenSSF Scorecard"></a>
+  <a href="https://api.reuse.software/info/github.com/groundlens-dev/groundlens"><img src="https://api.reuse.software/badge/github.com/groundlens-dev/groundlens" alt="REUSE compliant"></a>
+  <a href="https://slsa.dev"><img src="https://slsa.dev/images/gh-badge-level2.svg" alt="SLSA 2"></a>
+</p>
 
 <br>
 
-[![License: Apache 2.0](https://img.shields.io/badge/License-apache--2.0-9a5416?style=for-the-badge)](LICENSE)
-
+## The verification and evidence layer for AI.
 </div>
+<br>
+
+GroundLens is verification infrastructure for AI systems in production. It
+checks what an AI system produced, decides what to do with it under
+policies you control, and issues a signed evidence record that customers,
+auditors and regulators can verify independently. It runs inside your
+environment, on your outputs, without access to your models, prompts or
+architecture.
 
 <br>
 
-Give it an answer and the passages it was supposed to be written from. It hands
-back the words those passages do not support, and next to each one, the closest
-thing it found in your sources.
+## Why a verification layer
 
-```python
-4.75%   support 0.00    nearest in policy.pdf#p3: '3.90%'
-45      support 0.00    nearest in policy.pdf#p3: '30'
-```
+AI systems now produce factual claims, recommendations and decisions that
+organisations are accountable for. The tooling around them has matured in
+three directions: evaluation before release, observability in production,
+and guardrails on inputs and outputs. None of the three produces what an
+accountable organisation needs when a decision is questioned: proof that
+this specific output was checked, with which methods, under which rules,
+and that the check can be reproduced.
 
-Two marks in a margin. What to do about them stays your call.
+GroundLens is that missing layer. It is not a model, a benchmark or a
+dashboard. It is the infrastructure through which verification is
+performed, governed and evidenced, in the same sense that a payment
+processor is infrastructure for transactions or an identity provider is
+infrastructure for authentication: a stable contract, shared across
+applications, independent of any one of them.
 
-<br>
+## What the platform provides
 
-## Why we built it
+- [x] **Verification engine.** One pipeline, implemented once in Rust and exposed
+to Python, the command line and, on the roadmap, HTTP and WebAssembly: an
+output is decomposed into claims, every admitted verifier examines the
+claims and returns evidence, a policy interprets the evidence, and the
+whole chain is sealed into a record. The same input, policy and models
+produce the same record on any machine; this is tested on Linux, macOS and
+Windows on every commit.
 
-We measured nine hallucination detectors across five benchmarks — 45
-combinations — at the operating point production actually runs at: the
-false-alarm rate you pay to catch 95% of hallucinations. The best of the 45 was
-0.65. Two out of every three correct answers flagged for review.
+- [x] **Verifiers.** Independent methods under one contract. Each verifier
+returns evidence, never a verdict, and declares what it guarantees: exact,
+reproducible within a stated tolerance, or non-deterministic. The platform
+ships exact numeric verification (numbers, currencies, percentages and
+physical units across locales), symbolic rules, and lexical grounding on a
+pinned multilingual encoder. Entailment, semantic, geometric and
+model-based verifiers, and adapters for third-party detectors, follow on
+the roadmap. Existing verification libraries are not competitors of this
+layer; they are candidates to run inside it.
 
-Then we took one of those detectors and deleted the source documents before
-running it again. It kept most of its ranking ability without them. Much of what
-these systems detect is something other than grounding.
+- [x] **Policies.** Decisions are made by versioned, hashed policy documents,
+not by application code. A policy states which verifiers are required,
+recommended, optional or forbidden, which determinism class is allowed to
+decide, the thresholds and guard bands that apply, how disagreements and
+unresolved claims are handled, and which governance or regulatory controls
+each outcome concerns. Two organisations can apply different policies to
+the same evidence and both are correct; that is where risk appetite lives.
 
-So we stopped trying to produce a verdict. There is no good one to give.
-groundlens ships no threshold, no pass, no fail, no probability. It marks the
-words and names the source span each one lost to, and leaves the judgement where
-it already was — with the person who has to sign the document.
+- [x] **Evidence records.** Every verification produces an append-only,
+hash-chained, Ed25519-signed record: input hashes, verifier and model
+hashes, the evidence, the policy and its hash, the decision, the
+regulatory mapping, and the link to the previous record. A log of records
+is an audit trail that can be handed over as a file and verified offline
+by anyone, with no trust in the party that produced it.
 
-<br>
-
-## How it reads
-
-Two channels, because there are two kinds of content.
-
-**Words are checked by meaning.** How close a word gets to anything in your
-sources.
-
-**Numbers are checked by arithmetic.** Parsed to a value, formatting normalised,
-then present in the sources or absent. Nothing in between.
-
-The second channel exists because the first one cannot do that job. Change
-10,000 to 1,000 in a sentence and the meaning barely moves — but for a reviewer
-at a bank, that digit is the entire document.
-
-The figure for a whole answer is its **weakest** anchor, never the average. An
-average is where one wrong number among sixty correct words goes to hide.
-
-<br>
-
-## Who it is for
-
-A reviewer at a bank, an insurer, a law firm, a benefits agency — anywhere a
-retrieval system drafts something a human has to sign. They have an answer,
-three retrieved passages, and no time to read all four documents. That check
-takes five minutes today and mostly gets skipped. With marks in the margin it
-takes thirty seconds and gets done.
-
-The human stays in the picture. The measurements above are what happens when you
-try to remove them.
+- [x] **Bundles.** Models, tokenizers, calibrations, rules and policies travel
+as versioned bundles with a manifest of hashes. A bundle is verified
+artefact by artefact before it runs, is named by hash in every record, and
+can be installed by hand in an isolated environment. The engine itself
+never opens a network connection.
 
 <br>
 
-## Start here
+## Built for
 
-```bash
-pip install "groundlens[encoder]"
-groundlens read --answer answer.txt --context policy.pdf#p3=policy.txt
-```
-
+- [x] Teams that ship AI outputs into workflows where someone will ask for.
+- [x] AI vendors and system integrators serving regulated customers,
+platforms whose answers feed financial, legal, medical or operational
+decisions.
+- [x] Organisations preparing conformity and record-keeping
+evidence under the EU AI Act and comparable frameworks. GroundLens works
+on outputs and evidence alone, so independent verification is possible
+without disclosing how the system under review is built.
 
 <br>
 
-> Groundlens is an independent open-source project created and maintained by Javier Marín · [javier@groundlens.dev](mailto:javier@groundlens.dev)
+## Principles
+
+A verifier produces evidence, not truth. The policy decides, and the
+policy is yours. Deterministic where possible, reproducible where
+required, explicit provenance when neither is. Local execution, no
+runtime dependencies, no network. Independence from the system being
+verified, because a check that depends on the thing it checks is not a
+check.
 
 <br>
 
-<div align=center>
+## Project scope
+
+The engine, the verifiers, the policy language, the record format and the
+command line are open source under Apache-2.0, and will remain so: the
+record format only earns trust if anyone can inspect the code that
+produces and verifies it. 
+
+GroundLens non-open source offerings cover
+verification at production scale: calibration on your data, evidence
+packages for procurement and conformity files, maintained policies and
+regulatory mappings, specialised verifiers, and private deployment.
+
+<br>
+
+<div align="center">
   
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/yourusername) [![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/jamarinval)
+[groundlens](https://github.com/groundlens-dev/groundlens) | [README](https://github.com/groundlens-dev/groundlens#readme) | [FAQ](https://github.com/groundlens-dev/groundlens/blob/main/FAQ.md) | [Roadmap](https://github.com/groundlens-dev/groundlens/blob/main/ROADMAP.md) | [Changelog](https://github.com/groundlens-dev/groundlens/blob/main/CHANGELOG.md) | [PyPI](https://pypi.org/project/groundlens/) | [groundlens.dev](https://groundlens.dev)
 
-[groundlens.dev](https://groundlens.dev)
-
+<br>
+<sub>GroundLens (2026) · javier@jgroundlens.dev</sub>
 </div>
