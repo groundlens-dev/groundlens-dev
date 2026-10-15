@@ -9,7 +9,7 @@
 <a href="https://pypi.org/project/groundlens/"><img src="https://img.shields.io/pypi/v/groundlens?color=1a4fd6" alt="PyPI"></a>
 <a href="https://github.com/groundlens-dev/groundlens/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue" alt="Apache-2.0"></a>
 <a href="https://scorecard.dev/viewer/?uri=github.com/groundlens-dev/groundlens"><img src="https://api.securityscorecards.dev/projects/github.com/groundlens-dev/groundlens/badge" alt="OpenSSF Scorecard"></a>
-<a href="https://slsa.dev"><img src="https://slsa.dev/images/gh-badge-level2.svg" alt="SLSA 2"></a>
+<a href="https://slsa.dev"><img src="https://slsa.dev/images/gh-badge-level2.svg" alt="SLSA 3"></a>
 
 </div>
 
