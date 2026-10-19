@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/groundlens-dev/groundlens/main/docs/assets/groundlens_header.png" alt="GroundLens">
+<img src="assets/groundlens_diagram.png" alt="The LLM answer and its passages go through GroundLens first, then an LLM judge, then human review. A policy decides, and every check leaves a signed record.">
 
 <br>
 
